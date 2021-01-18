@@ -1,38 +1,80 @@
 .App {
   text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.trackTable {
+  margin: 0;
+  width: 100%;
+
+  text-align: left;
+	  overflow: hidden;
+	  width: 95%;
+	  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.trackTable th {
+  font-weight: bold;
+  font-size: 1em;
+text-align: left;
+color: whitesmoke;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.trackTable td {
+  font-weight: normal;
+  font-size: 1em;
+-webkit-box-shadow: 0 2px 2px -2px #0E1119;
+   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+        box-shadow: 0 2px 2px -2px #0E1119;
 }
 
-.App-link {
-  color: #61dafb;
+.trackTable td, .trackTable th {
+  padding-bottom: 5px;
+  padding-top: 5px;
+padding-left:5px;  
+color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.trackTable tr:nth-child(odd) {
+  background-color: #2C3134;
+}
+
+.trackTable tr:nth-child(even) {
+  background-color: #1B1F22;
+}
+
+.trackTable th {
+  background-color: #1ED760;
+}
+
+.container td:first-child { color: #FB667A; }
+
+.container tr:hover {
+ background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+        box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+background-color: #FFF842;
+color: #403E10;
+font-weight: bold;
+
+box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+transform: translate3d(6px, -6px, 0);
+
+transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.container td:nth-child(4),
+.container th:nth-child(4) { display: none; }
 }
